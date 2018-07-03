@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Page title -->
+    <title>NiteLite App</title>
+
+    <!-- Page favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/icons/icon-72x72.png" />
+
+    <!-- Application manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Jquery Mobile -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <!-- Theme Roller theme -->
+    <link rel="stylesheet" href="css/themes/NiteLiteTheme.css" />
+
+    <!-- Main css style -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Hello authentication script -->
+    <script src="lib/hello.all.js"></script>
+
+    <!-- Main application script -->
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+
+    <div data-role="page" id="local-events">
+
+        <div data-role="header" data-position="fixed">
+            <h1>Local Events</h1>
+            <a href="#profile-view" data-icon="user" class="ui-btn-right">Profile</a>
+
+            <div data-role="navbar" data-theme="c">
+                <ul>
+                    <li>
+                        <a href="#local-events" data-icon="location" class="ui-state-persist">Local</a>
+                    </li>
+                    <li>
+                        <a href="#global-events" data-icon="star">Global</a>
+                    </li>
+                    <li>
+                        <a href="#chats-view" data-icon="comment">Chats</a>
+                    </li>
+                    <li>
+                        <a href="#scan-view" data-icon="eye">Scan</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div role="main" class="ui-content">
+            <ul data-role="listview">
+                <li>
+                    <a href="#event-details">
+                        <img class="img-thumb" style="background-image: url('images/sample-event-pic.jpg');" />
+                        <h4>Kitchener</h4>
+                        <p>Awesome Night Club</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <a data-role="button" data-icon="edit" href="#create-event">Create an Event</a>
+        </div>
+    </div>
+
+    <div data-role="page" id="global-events">
+
+        <div data-role="header" data-position="fixed">
+            <h1>Global Events</h1>
+            <a href="#profile-view" data-icon="user" class="ui-btn-right">Profile</a>
+
+            <div data-role="navbar" data-theme="c">
+                <ul>
+                    <li>
+                        <a href="#local-events" data-icon="location">Local</a>
+                    </li>
+                    <li>
+                        <a href="#global-events" data-icon="star" class="ui-state-persist" >Global</a>
+                    </li>
+                    <li>
+                        <a href="#chats-view" data-icon="comment">Chats</a>
+                    </li>
+                    <li>
+                        <a href="#scan-view" data-icon="eye">Scan</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div role="main" class="ui-content">
+            <ul data-role="listview">
+                <li data-role="list-divider">Canada</li>
+                <li>
+                    <a>
+                        <img class="img-thumb" style="background-image: url('images/sample-event-pic.jpg');" />
+                        <h4>Kitchener</h4>
+                        <p>Awesome Night Club</p>
+                    </a>
+                </li>
+                <li data-role="list-divider">China</li>
+                <li>
+                    <a>
+                        <img class="img-thumb" style="background-image: url('images/sample-event-pic.jpg');" />
+                        <h4>Beijing</h4>
+                        <p>Cool Night Club</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <a data-role="button" data-icon="edit" href="#create-event">Create an Event</a>
+        </div>
+    </div>
+
+    <div data-role="page" id="chats-view">
+
+        <div data-role="header" data-position="fixed">
+            <h1>Chats</h1>
+            <a href="#profile-view" data-icon="user" class="ui-btn-right">Profile</a>
+
+            <div data-role="navbar" data-theme="c">
+                <ul>
+                    <li>
+                        <a href="#local-events" data-icon="location">Local</a>
+                    </li>
+                    <li>
+                        <a href="#global-events" data-icon="star">Global</a>
+                    </li>
+                    <li>
+                        <a href="#chats-view" data-icon="comment" class="ui-state-persist">Chats</a>
+                    </li>
+                    <li>
+                        <a href="#scan-view" data-icon="eye">Scan</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div role="main" class="ui-content">
+            <ul data-role="listview" data-count-theme="b">
+                <li data-role="list-divider">My Chats</li>
+                <li>
+                    <a>
+                        <img class="img-thumb" style="background-image: url('images/sample-event-pic.jpg');" />
+                        <h4>Awesome Night Club</h4>
+                        <p>You are in this chat</p>
+                        <span class="ui-li-count">12</span>
+                    </a>
+                </li>
+                <li data-role="list-divider">Suggested Chats</li>
+                <li>
+                    <a>
+                        <img class="img-thumb" style="background-image: url('images/sample-event-pic.jpg');" />
+                        <h4>Cool Night Club</h4>
+                        <p>You are at this event, join the chat!</p>
+                        <span class="ui-li-count">34</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="page" id="scan-view">
+
+        <div data-role="header" data-position="fixed">
+            <h1>Scan Code</h1>
+            <a href="#profile-view" data-icon="user" class="ui-btn-right">Profile</a>
+
+            <div data-role="navbar" data-theme="c">
+                <ul>
+                    <li>
+                        <a href="#local-events" data-icon="location">Local</a>
+                    </li>
+                    <li>
+                        <a href="#global-events" data-icon="star">Global</a>
+                    </li>
+                    <li>
+                        <a href="#chats-view" data-icon="comment">Chats</a>
+                    </li>
+                    <li>
+                        <a href="#scan-view" data-icon="eye" class="ui-state-persist">Scan</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div role="main" class="ui-content" style="text-align: center;">
+            <img class="qr-sample" src="images/qr-sample.png" />
+            <h4>SCAN A CODE TO JOIN EVENTS OR CHATS</h4>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <a data-role="button" data-icon="eye" href="#">Start Scanner</a>
+        </div>
+
+    </div>
+
+    <div data-role="page" id="event-details">
+
+        <div data-role="header" data-position="fixed">
+            <h1>Event Details</h1>
+            <a href="#profile-view" data-icon="user" class="ui-btn-right">Profile</a>
+
+            <div data-role="navbar" data-theme="c">
+                <ul>
+                    <li>
+                        <a href="#local-events" data-icon="location">Local</a>
+                    </li>
+                    <li>
+                        <a href="#global-events" data-icon="star">Global</a>
+                    </li>
+                    <li>
+                        <a href="#chats-view" data-icon="comment">Chats</a>
+                    </li>
+                    <li>
+                        <a href="#scan-view" data-icon="eye">Scan</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="event-header">
+            <a href="#popupBasic" data-position-to="window" data-rel="popup" data-transition="pop">
+                <div class="event-banner" style="background-image: url('images/banner-sample.jpg');">
+                </div>
+            </a>
+            <div data-role="popup" id="popupBasic" class="photopopup" data-overlay-theme="b" data-theme="b" data-tolerance="30,15">
+                <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+                <img src="images/banner-sample.jpg" />
+            </div>
+        </div>
+
+        <div role="main" class="ui-content">
+            <div class="event-title">
+                <h1>Event Name</h1>
+                <hr>
+            </div>
+
+            <table class="event-table">
+                <tr>
+                    <td>
+                        <b>Date</b>
+                    </td>
+                    <td>
+                        Sunday, December 25
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Location</b>
+                    </td>
+                    <td>
+                        Cool Club, Downtown
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Start Time</b>
+                    </td>
+                    <td>
+                        8:00 PM
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>End Time</b>
+                    </td>
+                    <td>
+                        3:00 AM
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Attending DJs</b>
+                    </td>
+                    <td style="text-align: center;">
+                        <a href="#djList" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a">View List</a>
+                        <div data-role="popup" id="djList" data-theme="b">
+                            <ul data-role="listview" data-inset="true" style="min-width:210px;">
+                                <li data-role="list-divider">DJs</li>
+                                <li>
+                                    <a href="#">Deejay 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Deejay 2</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Description</b>
+                    </td>
+                    <td style="text-align: justify;">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                        text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                        a type specimen book.
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div data-role="footer">
+            <div data-role="controlgroup">
+                <a href="#" class="ui-btn ui-corner-all ui-icon-bullets ui-btn-icon-left">Join Event</a>
+                <a href="#" class="ui-btn ui-corner-all ui-icon-comment ui-btn-icon-left">Join Event and Chat</a>
+                <a href="#" class="ui-btn ui-corner-all ui-icon-eye ui-btn-icon-left">View Codes</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div data-role="page" id="create-event">
+
+        <div data-role="header" data-position="fixed">
+            <h1>Create Event</h1>
+            <a href="#profile-view" data-icon="user" class="ui-btn-right">Profile</a>
+
+            <div data-role="navbar" data-theme="c">
+                <ul>
+                    <li>
+                        <a href="#local-events" data-icon="location">Local</a>
+                    </li>
+                    <li>
+                        <a href="#global-events" data-icon="star">Global</a>
+                    </li>
+                    <li>
+                        <a href="#chats-view" data-icon="comment">Chats</a>
+                    </li>
+                    <li>
+                        <a href="#scan-view" data-icon="eye">Scan</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div role="main" class="ui-content">
+            <h3>Enter the following details about the event</h3>
+            <hr>
+            <form id="create-event-form" action="" method="GET">
+                <label>Event Name:</label>
+                <input type="text" id="event-name">
+                <label>Venue Name:</label>
+                <input type="text" id="venue-name">
+                <label>Location Address:</label>
+                <input type="text" id="location-address">
+                <label>Event Description:</label>
+                <textarea id="event-description" placeholder=""></textarea>
+                <label>Date of event:</label>
+                <input type="date" id="event-date">
+                <label>Event Start Time:</label>
+                <input type="time" id="event-start-time">
+                <label>Event End Time:</label>
+                <input type="time" id="event-end-time">
+                <label>VIP Service Email:</label>
+                <input type="email" id="vip-email">
+                <label>Bottle Service Phone Number:</label>
+                <input type="text" id="bottle-service-phone">
+                <label>Music Type:</label>
+                <input type="text" id="event-music-type">
+                <label>Dress Code:</label>
+                <input type="text" id="dress-code">
+                <label>Age Demographic</label>
+                <input type="text" id="age-demographic">
+            </form>
+
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <input type="submit" form="create-event-form" data-icon="check" value="Save & Create Event">
+        </div>
+    </div>
+
+    <div data-role="page" id="profile-view">
+
+        <div data-role="header" data-position="fixed">
+            <h1>Profile</h1>
+            <a href="#profile-view" data-icon="user" class="ui-btn-right">Profile</a>
+
+            <div data-role="navbar" data-theme="c">
+                <ul>
+                    <li>
+                        <a href="#local-events" data-icon="location">Local</a>
+                    </li>
+                    <li>
+                        <a href="#global-events" data-icon="star">Global</a>
+                    </li>
+                    <li>
+                        <a href="#chats-view" data-icon="comment">Chats</a>
+                    </li>
+                    <li>
+                        <a href="#scan-view" data-icon="eye">Scan</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="well">
+            <div class="profile-image" style="background-image: url('images/profile-sample.png');"></div>
+        </div>
+
+        <div role="main" class="ui-content" data-theme="c">
+            <div class="user-name-banner">
+                <h2>JohnSmith007</h2>
+            </div>
+            <div class="user-details">
+                <hr>
+                <p>
+                    <b>First Name:</b> John</p>
+                <p>
+                    <b>Last Name:</b> Smith</p>
+                <p>
+                    <b>Email:</b> jsmith007@gmail.com</p>
+                <p>
+                    <b>Locale:</b> Kitchener, ON</p>
+                <p>
+                    <b>Description:</b> Just a rad dude with a boring name.</p>
+                <hr>
+                <p>
+                    <b>Account Status:</b> Standard User</p>
+            </div>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <a data-role="button" data-icon="edit" href="#edit-profile">Edit Profile</a>
+        </div>
+    </div>
+
+    <div data-role="page" id="edit-profile">
+
+        <div data-role="header" data-position="fixed">
+            <h1>Edit Profile</h1>
+            <a href="#profile-view" data-icon="user" class="ui-btn-right">Profile</a>
+
+            <div data-role="navbar" data-theme="c">
+                <ul>
+                    <li>
+                        <a href="#local-events" data-icon="location">Local</a>
+                    </li>
+                    <li>
+                        <a href="#global-events" data-icon="star">Global</a>
+                    </li>
+                    <li>
+                        <a href="#chats-view" data-icon="comment">Chats</a>
+                    </li>
+                    <li>
+                        <a href="#scan-view" data-icon="eye">Scan</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="well">
+            <div class="profile-image" style="background-image: url('images/profile-sample.png');"></div>
+        </div>
+
+        <div role="main" class="ui-content">
+            <div class="user-name-banner">
+                <h2>JohnSmith007</h2>
+            </div>
+            <div>
+                <hr>
+                <form id="edit-profile-form" action="" method="GET">
+                    <label>Edit Profile Picture: </label>
+                    <input type="file" name="user-picture" accept="image/x-png,image/jpeg">
+                    <label>Username:</label>
+                    <input type="text" id="username">
+                    <label>First Name:</label>
+                    <input type="text" id="first-name">
+                    <label>Last Name:</label>
+                    <input type="text" id="last-name">
+                    <label>Email:</label>
+                    <input type="text" id="email">
+                    <fieldset data-role="controlgroup" data-mini="true"></fieldset>
+                    <label for="radio-canada">Canada</label>
+                    <!--<input type="radio" name="country" value="United States">United States <br>
+					<input type="radio" name="country" value="Mexico">Mexico -->
+                    </fieldset>
+                    <fieldset data-role="controlgroup" data-mini="true">
+                        <legend>Province/Territories</legend>
+                        <input type="radio" name="province" value="Alberta" id="radio-alberta">
+                        <label for="radio-alberta">Alberta</label>
+                        <input type="radio" name="province" value="British-Columbia" id="radio-british-columbia">
+                        <label for="radio-british-columbia">British Columbia</label>
+                        <input type="radio" name="province" value="Manitoba" id="radio-manitoba">
+                        <label for="radio-manitoba">Manitoba</label>
+                        <input type="radio" name="province" value="New-Brunswick" id="radio-new-brunswick">
+                        <label for="radio-new-brunswick">New Brunswick</label>
+                        <input type="radio" name="province" value="Newfoundland-Labrador" id="radio-newfoundland-labrador">
+                        <label for="radio-newfoundland-labrador">Newfoundland and Labrador</label>
+                        <input type="radio" name="province" value="Northwest-Territories" id="radio-northwest-territories">
+                        <label for="radio-northwest-territories">Northwest Territories</label>
+                        <input type="radio" name="province" value="Nova-Scotia" id="radio-nova-scotia">
+                        <label for="radio-nova-scotia">Nova Scotia</label>
+                        <input type="radio" name="province" value="Nunavut" id="radio-nunavut">
+                        <label for="radio-nunavut">Nunavut</label>
+                        <input type="radio" name="province" value="Ontario" id="radio-ontario">
+                        <label for="radio-ontario">Ontario</label>
+                        <input type="radio" name="province" value="Prince-Edward-Island" id="radio-prince-edward-island">
+                        <label for="radio-prince-edward-island">Prince Edward Island</label>
+                        <input type="radio" name="province" value="Quebec" id="radio-quebec">
+                        <label for="radio-quebec">Quebec</label>
+                        <input type="radio" name="province" value="Saskatchewan" id="radio-saskatchewan">
+                        <label for="radio-saskatchewan">Saskatchewan</label>
+                        <input type="radio" name="province" value="Yukon" id="radio-yukon">
+                        <label for="radio-yukon">Yukon</label>
+                    </fieldset>
+                    <br>
+
+                    <label>City:</label>
+                    <input type="text" id="city">
+                    <label>Postal Code:</label>
+                    <input type="text" id="postal-code">
+                    <br>
+                    <label>Profile Description:</label>
+                    <textarea rows="4" cols="50" placeholder="Personal Descirption about yourself, music tastes, favorite Djs, venues and locations."></textarea>
+                </form>
+            </div>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <input type="submit" form="edit-profile-form" data-icon="check" value="Save Profile Changes">
+        </div>
+    </div>
+</body>
+
+</html>
